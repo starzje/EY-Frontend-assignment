@@ -1,3 +1,17 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  p {
+    @apply leading-normal mt-6 text-[1.25rem];
+  }
+
+  .title {
+    @apply md:text-5xl text-4xl text-center my-12 md:my-28;
+  }
+}
+/* library za carousel koristi inline style={{position:relative}} na nativnom elementu, pa ga ovdje overrideam na static, da mogu koristiti position:relative na parent od tog elementa */
+.slider-container {
+  position: static !important;
+}
