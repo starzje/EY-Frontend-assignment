@@ -7,7 +7,7 @@ export const CookieBanner: React.FC = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-700 text-white p-4 text-center">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 text-center text-white bg-slate-700">
       <p className="inline-block text-base">
         We use cookies to ensure you get the best experience on our website.{" "}
         <a href="/privacy-policy" className="underline">
@@ -16,7 +16,7 @@ export const CookieBanner: React.FC = () => {
       </p>
       <button
         onClick={acceptCookies}
-        className="bg-white mt-5 text-black hover:bg-slate-300 transition duration-300  px-4 py-2 ml-4 rounded-md"
+        className="px-4 py-2 mt-5 ml-4 text-black transition duration-300 bg-white rounded-md hover:bg-slate-300"
       >
         Accept
       </button>

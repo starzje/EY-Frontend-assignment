@@ -25,7 +25,7 @@ export const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
         renderCenterRightControls={(props) => <CenterRightControl {...props} />}
       >
         {images.map((image, index) => (
-          <img key={image.id} src={image.url} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+          <img key={image.id} src={image.url} alt={`Slide ${index}`} className="object-cover w-full h-full" />
         ))}
       </Carousel>
       <div className="flex justify-between w-full max-w-4xl mt-4 mb-5 "></div>

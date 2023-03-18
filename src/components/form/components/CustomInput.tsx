@@ -31,7 +31,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({ type, id, name, value,
           {label}
         </label>
       </div>
-      <span className="text-red-500 text-xs">{error}</span>
+      <span className="text-xs text-red-500">{error}</span>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export const GridShowcase: FC = () => {
   };
 
   return (
-    <div className="container flex justify-center items-center pb-20">
+    <div className="container flex items-center justify-center pb-20">
       <div className="w-full md:w-auto grid md:grid-cols-4 grid-cols-2 gap-5 p-[1rem]">
         {GRID_IMAGES.map((image) => (
           <img

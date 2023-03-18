@@ -24,10 +24,10 @@ export const Form: FC<FormProps> = ({
     <>
       {showSuccessModal && (
         <Modal onClose={handleCloseModal} visible={showSuccessModal}>
-          <h4 className="text-3xl mb-4">Message was submitted successfully.</h4>
+          <h4 className="mb-4 text-3xl">Message was submitted successfully.</h4>
           <button
             onClick={handleCloseModal}
-            className="bg-slate-600 text-white py-2 w-full px-4 rounded-md hover:bg-slate-700 focus:outline-none"
+            className="w-full px-4 py-2 text-white rounded-md bg-slate-600 hover:bg-slate-700 focus:outline-none"
           >
             Close
           </button>
@@ -35,7 +35,7 @@ export const Form: FC<FormProps> = ({
       )}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg mx-auto bg-primary-400 p-8 mb-20 rounded-lg shadow-lg"
+        className="w-full max-w-lg p-8 mx-auto mb-20 rounded-lg shadow-lg bg-primary-400"
         noValidate
       >
         <h4 className="text-3xl text-center mb-7">Get in touch</h4>
@@ -74,7 +74,7 @@ export const Form: FC<FormProps> = ({
         </CustomSelect>
         <button
           type="submit"
-          className="w-full bg-slate-600 text-white py-2 px-4 rounded-md hover:bg-slate-700 focus:outline-none"
+          className="w-full px-4 py-2 text-white rounded-md bg-slate-600 hover:bg-slate-700 focus:outline-none"
         >
           Submit
         </button>

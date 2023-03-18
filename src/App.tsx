@@ -5,7 +5,7 @@ import { ARTICLE_IMAGES, HERO_IMAGE, CAT_PARAGRAPH, DOG_PARAGRAPH } from "./cons
 const App = () => {
   return (
     <>
-      <div className="bg-primary-400 text-black pb-16">
+      <div className="pb-16 text-black bg-primary-400">
         <img src={HERO_IMAGE} alt="Header Image" className="w-full" />;
         <div className="container min-h-screen ">
           <h1 className="title">Daily pet facts - Love!</h1>
@@ -19,7 +19,7 @@ const App = () => {
           </main>
         </div>
       </div>
-      <h2 className="title mb-2">Gallery</h2>
+      <h2 className="mb-2 title">Gallery</h2>
       <Gallery />
       <Contact />
       <Footer />

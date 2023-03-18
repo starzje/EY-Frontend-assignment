@@ -15,7 +15,7 @@ export const ImageModal: FC<ImageModalProps> = ({ image, visible, onClose }) => 
       <div className="relative">
         <button
           onClick={onClose}
-          className="absolute -top-5 text-2xl -right-5 m-2 py-1 px-3 text-black border hover:bg-primary-400 bg-white rounded-full"
+          className="absolute px-3 py-1 m-2 text-2xl text-black bg-white border rounded-full -top-5 -right-5 hover:bg-primary-400"
         >
           &times;
         </button>
