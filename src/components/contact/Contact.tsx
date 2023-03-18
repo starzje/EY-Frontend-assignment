@@ -1,9 +1,9 @@
 import React, { FormEvent } from "react";
-import { useFormStateAndValidation, useSuccessModal } from "../../hooks";
+import { motion } from "framer-motion";
 import { FormData } from "../../types";
 import { Form } from "./components";
-import { motion } from "framer-motion";
 import { fadeAnimation } from "../../animations";
+import { useFormStateAndValidation, useModal } from "../../hooks";
 
 export const Contact = () => {
   const defaultFormState: FormData = {
@@ -12,12 +12,14 @@ export const Contact = () => {
     selection: "",
   };
 
-  const { formData, errors, handleChange, handleSubmit, resetFormData } = useFormStateAndValidation(defaultFormState);
+  const { formData, errors, handleChange, handleSubmit, resetFormData } = useFormStateAndValidation(defaultFormState); // custom hook for handling form state and validation
 
-  const { showSuccessModal, handleCloseModal, openModal } = useSuccessModal();
+  const { isOpen: showSuccessModal, handleCloseModal, openModal } = useModal(); // custom hook for handling modal state
 
+  // handle form submission with custom validation
   const handleFormSubmit = (event: FormEvent) => {
     const isFormValid = handleSubmit(event);
+    // If the form is valid, open the success modal and reset the form data
     if (isFormValid) {
       openModal();
       resetFormData();

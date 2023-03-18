@@ -1,14 +1,15 @@
 import React, { FC } from "react";
+import { Image } from "../../../../types";
 import { Modal } from "../../../index";
 
 interface ImageModalProps {
-  image: { id: number; url: string } | null;
+  image: Image | null;
   visible: boolean;
   onClose: () => void;
 }
 
 export const ImageModal: FC<ImageModalProps> = ({ image, visible, onClose }) => {
-  if (!visible || !image) return null;
+  if (!visible || !image) return null; // if the modal is not visible or there is no image, return null
 
   return (
     <Modal onClose={onClose} containerClassName="items-center justify-center" visible={visible}>

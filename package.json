@@ -1,7 +1,7 @@
 {
   "name": "ey-frontend-assignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend technical assignment for EY",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --open",
@@ -10,7 +10,7 @@
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Ivan Starcevic",
   "license": "ISC",
   "dependencies": {
     "framer-motion": "^10.6.0",

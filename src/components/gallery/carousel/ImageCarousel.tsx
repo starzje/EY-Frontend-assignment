@@ -11,7 +11,7 @@ interface CarouselProps {
 }
 
 export const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
-  const slidesToShow = useResponsiveCarousel();
+  const slidesToShow = useResponsiveCarousel(); // custom hook for handling responsive carousel
 
   return (
     <motion.div
@@ -23,14 +23,14 @@ export const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
     >
       <Carousel
         wrapAround
-        slidesToShow={slidesToShow}
+        slidesToShow={slidesToShow} // 1, 2, 3,4 or 5 slides depending on the screen size
         cellSpacing={10}
         swiping
         dragging
         zoomScale={0.9}
         renderBottomCenterControls={() => null} // remove the dots/pagination
-        renderCenterLeftControls={(props) => <CenterLeftControl {...props} />}
-        renderCenterRightControls={(props) => <CenterRightControl {...props} />}
+        renderCenterLeftControls={(props) => <CenterLeftControl {...props} />} // custom left control
+        renderCenterRightControls={(props) => <CenterRightControl {...props} />} // custom right control
       >
         {images.map((image, index) => (
           <img

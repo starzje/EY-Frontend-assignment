@@ -1,7 +1,6 @@
 import React, { ChangeEvent, FormEvent, FC } from "react";
 import { FormData } from "../../../types";
-import { Modal } from "../../shared/Modal";
-import { CustomInput, CustomSelect } from "../index";
+import { CustomInput, CustomSelect, SuccessModal } from "../index";
 
 interface FormProps {
   formData: FormData;
@@ -22,17 +21,7 @@ export const Form: FC<FormProps> = ({
 }) => {
   return (
     <>
-      {showSuccessModal && (
-        <Modal onClose={handleCloseModal} visible={showSuccessModal}>
-          <h4 className="mb-4 text-3xl">Uspješna prijava</h4>
-          <button
-            onClick={handleCloseModal}
-            className="w-full px-4 py-2 text-white rounded-md bg-slate-600 hover:bg-slate-700 focus:outline-none"
-          >
-            Close
-          </button>
-        </Modal>
-      )}
+      {showSuccessModal && <SuccessModal onClose={handleCloseModal} visible={showSuccessModal} />}
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg p-8 mx-auto mb-20 rounded-lg shadow-lg bg-primary-400"

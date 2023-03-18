@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 interface CustomInputProps {
   type: "text" | "email";
@@ -10,7 +10,7 @@ interface CustomInputProps {
   error?: string;
 }
 
-export const CustomInput: React.FC<CustomInputProps> = ({ type, id, name, value, onChange, label, error }) => {
+export const CustomInput: FC<CustomInputProps> = ({ type, id, name, value, onChange, label, error }) => {
   return (
     <div className="mb-4">
       <div className="relative ">

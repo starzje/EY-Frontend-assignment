@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Gallery, Footer, Article, Contact, CookieBanner } from "./components";
-import { ARTICLE_IMAGES, HERO_IMAGE, CAT_PARAGRAPH, DOG_PARAGRAPH } from "./constants";
+import { Gallery, Footer, Contact, CookieBanner, MainContent } from "./components";
+import { HERO_IMAGE } from "./constants";
 import { slideInFromBottom } from "./animations";
 
 const App = () => {
@@ -14,19 +14,7 @@ const App = () => {
         transition={{ duration: 0.5 }}
       >
         <img src={HERO_IMAGE} alt="Header Image" className="w-full" loading="eager" />;
-        <motion.div className="container min-h-screen">
-          <motion.h1 className="title" initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 1 }}>
-            Daily pet facts - Love!
-          </motion.h1>
-          <main className="space-y-24 md:space-y-32">
-            <Article img={ARTICLE_IMAGES.cat} imgAlt="Image of a cat" title="The cat">
-              {CAT_PARAGRAPH}
-            </Article>
-            <Article img={ARTICLE_IMAGES.dog} imgAlt="Image of a dog" title="The dog" flexDirection="flex-row-reverse">
-              {DOG_PARAGRAPH}
-            </Article>
-          </main>
-        </motion.div>
+        <MainContent />
       </motion.div>
       <motion.h2
         className="mb-2 title"

@@ -1,5 +1,8 @@
 import { BreakpointConfig } from "../types";
 
+/**
+ * An array of objects containing the breakpoint and the number of slides to show at that breakpoint.
+ */
 export const BREAKPOINTS_CONFIG: BreakpointConfig[] = [
   { breakpoint: 2200, slidesToShow: 6 },
   { breakpoint: 1600, slidesToShow: 5 },

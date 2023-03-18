@@ -1,7 +1,13 @@
 import { FormData, FormValidationInputErrors, ValidationErrors } from "../../../types";
 
-const isValidEmail = (email: string): boolean => /\S+@\S+\.\S+/.test(email);
+const isValidEmail = (email: string): boolean => /\S+@\S+\.\S+/.test(email); // basic email regex validation
 
+/**
+ * Validates the given form data and returns an object containing any validation errors and a boolean indicating the overall validity of the form.
+ * @function
+ * @param {FormData} formData - The form data to be validated.
+ * @returns {ValidationErrors} An object containing any validation errors and a boolean indicating the overall validity of the form.
+ */
 export const validateForm = (formData: FormData): ValidationErrors => {
   const newErrors: FormValidationInputErrors = {};
 
@@ -21,6 +27,6 @@ export const validateForm = (formData: FormData): ValidationErrors => {
 
   return {
     newErrors,
-    isValid: Object.keys(newErrors).length === 0,
+    isValid: Object.keys(newErrors).length === 0, // checks if there are any errors in the newErrors object
   };
 };

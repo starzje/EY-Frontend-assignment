@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { GRID_IMAGES } from "../../../constants";
-import { useSuccessModal } from "../../../hooks";
+import { useModal } from "../../../hooks";
 import { Image } from "../../../types";
 import { ImageModal } from "../index";
 import { motion } from "framer-motion";
@@ -8,11 +8,11 @@ import { fadeAnimation } from "../../../animations";
 
 export const GridShowcase: FC = () => {
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
-  const { showSuccessModal: modalVisible, handleCloseModal, openModal } = useSuccessModal(); // Use the hook and rename the properties
+  const { isOpen: modalVisible, handleCloseModal, openModal } = useModal(); // Use the custom hook for modal control and rename the properties
 
   const handleClick = (image: Image) => {
     setSelectedImage(image);
-    openModal(); // Use the openImageModal function from the hook
+    openModal();
   };
 
   return (

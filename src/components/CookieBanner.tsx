@@ -2,9 +2,9 @@ import React from "react";
 import { useCookieConsent } from "../hooks/";
 
 export const CookieBanner: React.FC = () => {
-  const { showBanner, acceptCookies } = useCookieConsent();
+  const { showBanner, acceptCookies } = useCookieConsent(); // custom hook for handling cookie consent
 
-  if (!showBanner) return null;
+  if (!showBanner) return null; // If the user has already accepted the cookies, don't show the banner
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 text-center text-white bg-slate-700">

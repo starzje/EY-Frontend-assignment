@@ -6,17 +6,11 @@ interface ModalProps {
   children: ReactNode;
   containerClassName?: string;
   modalClassName?: string;
-  visible: boolean; // Add the visible prop
+  visible: boolean;
 }
 
-export const Modal: FC<ModalProps> = ({
-  onClose,
-  children,
-  containerClassName = "",
-  modalClassName = "",
-  visible, // Add the visible prop
-}) => {
-  useLockBodyScroll(visible); // Use the hook with the visible prop
+export const Modal: FC<ModalProps> = ({ onClose, children, containerClassName = "", modalClassName = "", visible }) => {
+  useLockBodyScroll(visible); // Use the useLockBodyScroll hook to lock the body scroll when the modal is visible
 
   return (
     <div

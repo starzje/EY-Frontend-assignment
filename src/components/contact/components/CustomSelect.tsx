@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 interface CustomSelectProps {
   id: string;
@@ -10,7 +10,7 @@ interface CustomSelectProps {
   error?: string;
 }
 
-export const CustomSelect: React.FC<CustomSelectProps> = ({ id, name, value, onChange, label, children, error }) => {
+export const CustomSelect: FC<CustomSelectProps> = ({ id, name, value, onChange, label, children, error }) => {
   return (
     <div className="relative">
       <div className="relative mb-7">

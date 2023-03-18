@@ -1,5 +1,9 @@
+/**
+ * @fileoverview Exports all hooks using barrel export pattern.
+ */
+
 export * from "./useLockBodyScroll";
 export * from "./useResponsiveCarousel";
 export * from "./useFormStateAndValidation";
-export * from "./useSuccessModal";
-export * from "./useCookieConesnt";
+export * from "./useModal";
+export * from "./useCookieConsent";

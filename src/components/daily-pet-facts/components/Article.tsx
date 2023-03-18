@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { slideInAnimation } from "../../animations";
+import { slideInAnimation } from "../../../animations";
 
 interface ArticleProps {
   img: string;
@@ -11,7 +11,7 @@ interface ArticleProps {
 }
 
 export const Article: FC<ArticleProps> = ({ img, imgAlt, title, children, flexDirection = "flex-row" }) => {
-  const animation = slideInAnimation(flexDirection);
+  const animation = slideInAnimation(flexDirection); // get the slide-in animation based on the flex-direction
   return (
     <motion.section
       variants={animation}
