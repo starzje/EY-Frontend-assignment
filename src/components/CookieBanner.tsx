@@ -7,7 +7,7 @@ export const CookieBanner: React.FC = () => {
   if (!showBanner) return null; // If the user has already accepted the cookies, don't show the banner
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 text-center text-white bg-slate-700">
+    <div className="fixed bottom-0 max-w-screen left-0 right-0 z-50 p-4 text-center text-white bg-slate-700">
       <p className="inline-block text-base">
         We use cookies to ensure you get the best experience on our website.{" "}
         <a href="/privacy-policy" className="underline">

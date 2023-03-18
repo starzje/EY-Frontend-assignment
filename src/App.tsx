@@ -28,7 +28,9 @@ const App = () => {
       <Gallery />
       <Contact />
       <Footer />
-      <CookieBanner />
+      <div className="bg-slate-900 border-3 border-red-500 relative">
+        <CookieBanner />
+      </div>
     </>
   );
 };
