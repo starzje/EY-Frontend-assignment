@@ -1,6 +1,6 @@
 import React from "react";
 
-export const footerMenu = [
+export const FOOTER_MENU = [
   {
     id: 1,
     title: "PET-FACTS.COM",
@@ -31,14 +31,14 @@ export const footerMenu = [
   },
 ];
 
-export const copyRightText = (
+export const COPYRIGHT_TEXT = (
   <small>
     Copyright is a legal right, existing in many countries, that grants the creator of an original work exclusive rights
     to <br /> determine whether, and under what conditions, this original work may be used by others.
   </small>
 );
 
-export const catSectionParagraph = (
+export const CAT_PARAGRAPH = (
   <>
     <p>
       Cats have been domesticated for around 4,000 years. While they were once valued for their hunting abilities, they
@@ -56,7 +56,7 @@ export const catSectionParagraph = (
   </>
 );
 
-export const dogSectionParagraph = (
+export const DOG_PARAGRAPH = (
   <>
     <p>
       Domestic dogs have been companions to people for more than 15,000 years. There are more than 400 different breeds
