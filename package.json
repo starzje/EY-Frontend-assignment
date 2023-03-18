@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Frontend technical assignment for EY",
   "main": "index.js",
+  "homepage": "https://github.com/starzje/EY-Frontend-assignment",
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
-    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Ivan Starcevic",
@@ -35,6 +38,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.21",
