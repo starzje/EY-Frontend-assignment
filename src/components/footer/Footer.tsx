@@ -8,7 +8,7 @@ export const Footer: FC = () => {
         <div className="flex flex-col justify-around gap-8 mb-8 md:flex-row">
           {FOOTER_MENU.map((column) => (
             <div key={column.id}>
-              <h3 className="mb-10 font-bold">{column.title}</h3>
+              <h3 className="mb-10 font-bold text-center">{column.title}</h3>
               <ul>
                 {column.links.map((link) => (
                   <li key={link.id}>
