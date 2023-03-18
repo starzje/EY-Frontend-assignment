@@ -1,24 +1,22 @@
 import React, { FC, useState } from "react";
-import { gridImages } from "../../../constants";
-import ImageModal from "./components/ImageModal";
+import { GRID_IMAGES } from "../../../constants";
+import { useSuccessModal } from "../../../hooks";
+import { Image } from "../../../types";
+import { ImageModal } from "../index";
 
 export const GridShowcase: FC = () => {
-  const [selectedImage, setSelectedImage] = useState<{ id: number; url: string } | null>(null);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const { showSuccessModal: modalVisible, handleCloseModal, openModal } = useSuccessModal(); // Use the hook and rename the properties
 
-  const handleClick = (image: { id: number; url: string }) => {
+  const handleClick = (image: Image) => {
     setSelectedImage(image);
-    setModalVisible(true);
-  };
-
-  const closeModal = () => {
-    setModalVisible(false);
+    openModal(); // Use the openImageModal function from the hook
   };
 
   return (
     <div className="container flex justify-center items-center pb-20">
       <div className="w-full md:w-auto grid md:grid-cols-4 grid-cols-2 gap-5 p-[1rem]">
-        {gridImages.map((image) => (
+        {GRID_IMAGES.map((image) => (
           <img
             key={image.id}
             src={image.url}
@@ -28,7 +26,7 @@ export const GridShowcase: FC = () => {
           />
         ))}
       </div>
-      <ImageModal image={selectedImage} visible={modalVisible} onClose={closeModal} />
+      <ImageModal image={selectedImage} visible={modalVisible} onClose={handleCloseModal} />
     </div>
   );
 };
