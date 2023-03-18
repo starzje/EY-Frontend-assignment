@@ -38,7 +38,7 @@ export const Form: FC<FormProps> = ({
         className="w-full max-w-lg p-8 mx-auto mb-20 rounded-lg shadow-lg bg-primary-400"
         noValidate
       >
-        <h4 className="text-3xl text-center mb-7">Get in touch</h4>
+        <h3 className="text-3xl text-center mb-7">Get in touch</h3>
         <CustomInput
           id="name"
           name="name"

@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <div className="pb-16 text-black bg-primary-400">
-        <img src={HERO_IMAGE} alt="Header Image" className="w-full" />;
+        <img src={HERO_IMAGE} alt="Header Image" className="w-full" loading="eager" />;
         <div className="container min-h-screen ">
           <h1 className="title">Daily pet facts - Love!</h1>
           <main className="space-y-24 md:space-y-32">

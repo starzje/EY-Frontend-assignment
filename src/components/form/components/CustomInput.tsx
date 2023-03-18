@@ -20,6 +20,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({ type, id, name, value,
           name={name}
           value={value}
           onChange={onChange}
+          autoComplete="off"
           className="border-2 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-3 text-gray-900 focus:border-slate-600 focus:outline-none focus:ring-0"
           placeholder=" "
           required

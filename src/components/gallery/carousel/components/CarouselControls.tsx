@@ -15,6 +15,7 @@ const CarouselControl: FC<CarouselControlProps> = ({ direction, onClick }) => {
         src={CAROUSEL_ARROW}
         alt={`${direction === "left" ? "Previous" : "Next"} Arrow`}
         className={`w-10 h-10 ${rotation} absolute bottom-0 ${direction === "left" ? "left-1/3" : "right-1/3"}`}
+        loading="lazy"
       />
     </button>
   );

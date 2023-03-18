@@ -19,7 +19,7 @@ export const ImageModal: FC<ImageModalProps> = ({ image, visible, onClose }) => 
         >
           &times;
         </button>
-        <img src={image.url} alt={`Image of a cat`} className="w-full h-auto" />
+        <img src={image.url} alt={`Image of a cat`} className="w-full h-auto" loading="lazy" />
       </div>
     </Modal>
   );

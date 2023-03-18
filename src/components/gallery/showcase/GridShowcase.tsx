@@ -23,6 +23,7 @@ export const GridShowcase: FC = () => {
             alt={`Image of a cat`}
             className="w-full object-cover rounded-[10px] cursor-pointer hover:opacity-80 transition duration-300"
             onClick={() => handleClick(image)}
+            loading="lazy"
           />
         ))}
       </div>
