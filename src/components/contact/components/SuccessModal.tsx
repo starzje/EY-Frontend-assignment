@@ -9,7 +9,10 @@ interface SuccessModalProps {
 export const SuccessModal: FC<SuccessModalProps> = ({ onClose, visible }) => (
   <Modal onClose={onClose} visible={visible}>
     <h4 className="mb-4 text-3xl">Uspješna prijava</h4>
-    <button onClick={onClose} className="form-submit-button">
+    <button
+      onClick={onClose}
+      className="w-full px-4 py-2 text-white rounded-md bg-slate-600 hover:bg-slate-700 focus:outline-none"
+    >
       Close
     </button>
   </Modal>
