@@ -2,6 +2,8 @@ import React, { FormEvent } from "react";
 import { useFormStateAndValidation, useSuccessModal } from "../../hooks";
 import { FormData } from "../../types";
 import { Form } from "./components";
+import { motion } from "framer-motion";
+import { fadeAnimation } from "../../animations";
 
 export const Contact = () => {
   const defaultFormState: FormData = {
@@ -23,7 +25,7 @@ export const Contact = () => {
   };
 
   return (
-    <section>
+    <motion.section variants={fadeAnimation} initial="hidden" whileInView="visible" viewport={{ once: true }}>
       <Form
         formData={formData}
         errors={errors}
@@ -32,6 +34,6 @@ export const Contact = () => {
         showSuccessModal={showSuccessModal}
         handleCloseModal={handleCloseModal}
       />
-    </section>
+    </motion.section>
   );
 };

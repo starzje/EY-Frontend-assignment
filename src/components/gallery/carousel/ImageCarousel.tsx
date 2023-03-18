@@ -3,6 +3,8 @@ import Carousel from "nuka-carousel";
 import { CenterLeftControl, CenterRightControl } from "../index";
 import { useResponsiveCarousel } from "../../../hooks";
 import { Image } from "../../../types";
+import { motion } from "framer-motion";
+import { fadeAnimation } from "../../../animations";
 
 interface CarouselProps {
   images: Image[];
@@ -12,7 +14,13 @@ export const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
   const slidesToShow = useResponsiveCarousel();
 
   return (
-    <div className="flex flex-col relative justify-center items-center h-[30em] pb-[2em] 2xl:pb-[10em] ">
+    <motion.div
+      className="flex flex-col relative justify-center items-center h-[30em] pb-[2em] 2xl:pb-[10em] "
+      variants={fadeAnimation}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <Carousel
         wrapAround
         slidesToShow={slidesToShow}
@@ -35,6 +43,6 @@ export const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
         ))}
       </Carousel>
       <div className="flex justify-between w-full max-w-4xl mt-4 mb-5 "></div>
-    </div>
+    </motion.div>
   );
 };

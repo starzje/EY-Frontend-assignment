@@ -3,3 +3,8 @@ export interface Image {
   url: string;
   description?: string;
 }
+
+export interface BreakpointConfig {
+  breakpoint: number;
+  slidesToShow: number;
+}

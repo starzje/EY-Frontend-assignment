@@ -24,7 +24,7 @@ export const Form: FC<FormProps> = ({
     <>
       {showSuccessModal && (
         <Modal onClose={handleCloseModal} visible={showSuccessModal}>
-          <h4 className="mb-4 text-3xl">Message was submitted successfully.</h4>
+          <h4 className="mb-4 text-3xl">Uspješna prijava</h4>
           <button
             onClick={handleCloseModal}
             className="w-full px-4 py-2 text-white rounded-md bg-slate-600 hover:bg-slate-700 focus:outline-none"

@@ -1,7 +1,4 @@
-interface BreakpointConfig {
-  breakpoint: number;
-  slidesToShow: number;
-}
+import { BreakpointConfig } from "../types";
 
 export const BREAKPOINTS_CONFIG: BreakpointConfig[] = [
   { breakpoint: 2200, slidesToShow: 6 },
