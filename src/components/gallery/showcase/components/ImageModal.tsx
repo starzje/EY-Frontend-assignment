@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useLockBodyScroll } from "../../../../hooks/useLockBodyScroll";
+import { Modal } from "../../../index";
 
 interface ImageModalProps {
   image: { id: number; url: string } | null;
@@ -7,29 +7,20 @@ interface ImageModalProps {
   onClose: () => void;
 }
 
-const ImageModal: FC<ImageModalProps> = ({ image, visible, onClose }) => {
-  useLockBodyScroll(visible);
-
+export const ImageModal: FC<ImageModalProps> = ({ image, visible, onClose }) => {
   if (!visible || !image) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
-      <div
-        className="relative bg-white p-4 rounded-lg"
-        onClick={(event) => {
-          event.stopPropagation();
-        }}
-      >
+    <Modal onClose={onClose} containerClassName="items-center justify-center" visible={visible}>
+      <div className="relative">
         <button
           onClick={onClose}
-          className="absolute top-0 text-2xl right-0 m-2 py-1 px-3 text-black hover:bg-primary-400 bg-white rounded-full"
+          className="absolute -top-5 text-2xl -right-5 m-2 py-1 px-3 text-black border hover:bg-primary-400 bg-white rounded-full"
         >
           &times;
         </button>
         <img src={image.url} alt={`Image of a cat`} className="w-full h-auto" />
       </div>
-    </div>
+    </Modal>
   );
 };
-
-export default ImageModal;
