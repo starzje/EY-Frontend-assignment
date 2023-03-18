@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import { copyRightText, footerMenu } from "../../constants";
+import { COPYRIGHT_TEXT, FOOTER_MENU } from "../../constants";
 
 export const Footer: FC = () => {
   return (
     <footer className="bg-secondary-900 py-20 text-white text-center">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-around gap-8 mb-8">
-          {footerMenu.map((column) => (
+          {FOOTER_MENU.map((column) => (
             <div key={column.id}>
               <h3 className="font-bold mb-10">{column.title}</h3>
               <ul>
@@ -21,7 +21,7 @@ export const Footer: FC = () => {
             </div>
           ))}
         </div>
-        <div className="text-center text-lg pt-4">{copyRightText}</div>
+        <div className="text-center text-lg pt-4">{COPYRIGHT_TEXT}</div>
       </div>
     </footer>
   );
