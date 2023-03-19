@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, FC } from "react";
 import { FormData } from "../../../types";
-import { CustomInput, CustomSelect, SuccessModal } from "../index";
+import { CustomInput, CustomSelect, SuccessModal } from "../../../components";
 
 interface FormProps {
   formData: FormData;
@@ -21,7 +21,7 @@ export const Form: FC<FormProps> = ({
 }) => {
   return (
     <>
-      {showSuccessModal && <SuccessModal onClose={handleCloseModal} visible={showSuccessModal} />}
+      <SuccessModal onClose={handleCloseModal} visible={showSuccessModal} />
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg p-8 mx-auto mb-20 rounded-lg shadow-lg bg-primary-400"

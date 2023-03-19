@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "",
+    publicPath: "", // images keep relative path after build
     clean: true,
   },
   resolve: {
@@ -63,9 +63,6 @@ module.exports = {
         {
           from: "public/assets",
           to: "assets",
-          globOptions: {
-            ignore: ["**/.DS_Store"],
-          },
         },
       ],
     }),

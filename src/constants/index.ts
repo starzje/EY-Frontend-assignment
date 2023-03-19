@@ -3,5 +3,5 @@
  */
 
 export * from "./images";
-export * from "./Text";
+export * from "./text";
 export * from "./breakpoints";
