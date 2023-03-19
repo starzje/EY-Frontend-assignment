@@ -5,7 +5,7 @@ import { Article } from "./index";
 
 export const MainContent: FC = () => {
   return (
-    <motion.div className="container min-h-screen">
+    <motion.section className="container min-h-screen">
       <motion.h1 className="title" initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 1 }}>
         Daily pet facts - Love!
       </motion.h1>
@@ -17,6 +17,6 @@ export const MainContent: FC = () => {
           {DOG_PARAGRAPH}
         </Article>
       </main>
-    </motion.div>
+    </motion.section>
   );
 };
